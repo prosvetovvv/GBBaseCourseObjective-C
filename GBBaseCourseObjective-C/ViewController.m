@@ -7,28 +7,6 @@
 
 #import "ViewController.h"
 
-enum Gander {
-    GanderFemale,
-    GanderMan
-};
-typedef enum Gander Gander;
-
-struct Human {
-    NSString *name;
-    NSInteger age;
-    Gander gender;
-};
-typedef struct Human Human;
-
-enum Operations {
-    OperationSum,
-    OperationSubtracting,
-    OperationMultiplication,
-    OperationDevision
-};
-typedef enum Operations Operations;
-
-
 @interface ViewController ()
 
 @end
@@ -39,15 +17,25 @@ typedef enum Operations Operations;
     [super viewDidLoad];
     
     // Ex1
-    [self createAndPrintUserList];
+    //[self createAndPrintUserList];
     
     // Ex2
-    CGFloat result = [self calculate:OperationDevision with: 5 and: 1];
-    NSLog(@"%.2f", result);
+    //CGFloat result = [self calculate:OperationDevision with: 5 and: 1];
+    //NSLog(@"%.2f", result);
     
     // Ex3
-    [self createAndPrintHumans];
- 
+    //[self createAndPrintHumans];
+    
+    // LessonFour
+    [self createAndPrintStudents];
+}
+
+//MARK:- LessonFour
+- (void)createAndPrintStudents {
+    Student *studentOne = [[Student alloc] initStudentWithFirstName: @"Ivan" lastName: @"Petrov" age: 20];
+    Student *studentTwo = [[Student alloc] initStudentWithFirstName: @"Petr" lastName: @"Ivanov" age: 22];
+    Student *studentThree = [[Student alloc] initStudentWithFirstName: @"Andrey" lastName: @"Sidorov" age: 19];
+    NSLog(@"%@ %@ %@", studentOne, studentTwo, studentThree);
 }
 
 //MARK:- Ex1

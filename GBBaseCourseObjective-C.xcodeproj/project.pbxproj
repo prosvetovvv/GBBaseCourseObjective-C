@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E1975A9725D036E200BEBD5E /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = E1975A9625D036E200BEBD5E /* Student.m */; };
 		E1C0F97125C7156D00BC3248 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E1C0F97025C7156D00BC3248 /* AppDelegate.m */; };
 		E1C0F97425C7156D00BC3248 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E1C0F97325C7156D00BC3248 /* SceneDelegate.m */; };
 		E1C0F97725C7156D00BC3248 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1C0F97625C7156D00BC3248 /* ViewController.m */; };
@@ -17,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E1975A9525D036E200BEBD5E /* Student.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
+		E1975A9625D036E200BEBD5E /* Student.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
 		E1C0F96C25C7156D00BC3248 /* GBBaseCourseObjective-C.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GBBaseCourseObjective-C.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1C0F96F25C7156D00BC3248 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E1C0F97025C7156D00BC3248 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -67,6 +70,8 @@
 				E1C0F97325C7156D00BC3248 /* SceneDelegate.m */,
 				E1C0F97525C7156D00BC3248 /* ViewController.h */,
 				E1C0F97625C7156D00BC3248 /* ViewController.m */,
+				E1975A9525D036E200BEBD5E /* Student.h */,
+				E1975A9625D036E200BEBD5E /* Student.m */,
 				E1C0F97825C7156D00BC3248 /* Main.storyboard */,
 				E1C0F97B25C7156E00BC3248 /* Assets.xcassets */,
 				E1C0F97D25C7156E00BC3248 /* LaunchScreen.storyboard */,
@@ -147,6 +152,7 @@
 			files = (
 				E1C0F97725C7156D00BC3248 /* ViewController.m in Sources */,
 				E1C0F97125C7156D00BC3248 /* AppDelegate.m in Sources */,
+				E1975A9725D036E200BEBD5E /* Student.m in Sources */,
 				E1C0F98225C7156E00BC3248 /* main.m in Sources */,
 				E1C0F97425C7156D00BC3248 /* SceneDelegate.m in Sources */,
 			);
@@ -293,6 +299,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7U5XZ95AHH;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = "GBBaseCourseObjective-C/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -311,6 +318,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7U5XZ95AHH;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = "GBBaseCourseObjective-C/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

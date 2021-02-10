@@ -10,7 +10,6 @@
 
 @implementation Student
 
-@synthesize age = _age;
 
 - (instancetype)initStudentWithFirstName: (NSString *)firstName lastName: (NSString *)lastName age: (NSInteger)age {
     self = [super init];
@@ -29,6 +28,7 @@
 }
 
 - (NSString *)description {
+    [super description];
     return [NSString
             stringWithFormat: @"\nFirst Name: %@\nLast Name: %@\nFull Name: %@\nAge: %li",
             self.firstName, self.lastName, self.fullName, (long)self.age];

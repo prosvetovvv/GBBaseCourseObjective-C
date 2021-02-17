@@ -10,6 +10,20 @@
 
 @implementation Student
 
+- (nullable instancetype)initWithCoder:(nonnull NSCoder *)coder {
+    self = [super init];
+    
+    if (self) {
+        self.firstName = [coder decodeObjectForKey: @"firstName"];
+        self.lastName = [coder decodeObjectForKey: @"lastName"];
+    }
+    return self;
+}
+
+- (void)encodeWithCoder:(nonnull NSCoder *)coder {
+    [coder encodeObject:self.firstName forKey:@"firstName"];
+    [coder encodeObject:self.lastName forKey:@"lastName"];
+}
 
 - (instancetype)initStudentWithFirstName: (NSString *)firstName lastName: (NSString *)lastName age: (NSInteger)age {
     self = [super init];

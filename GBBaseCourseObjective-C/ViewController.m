@@ -27,7 +27,20 @@
     //[self createAndPrintHumans];
     
     // LessonFour
-    [self createAndPrintStudents];
+    //[self createAndPrintStudents];
+    
+    //LessonSeven
+}
+
+//MARK:- LessonSeven
+- (NSString*)directory {
+    return [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject] stringByAppendingString:@"/student.txt"];
+}
+
+- (Student*)readStudent:(Student*)student {
+    //NSData *data = [NSKeyedArchiver archivedDataWithRootObject:student requiringSecureCoding:NO error:nil];
+    NSData *data = [NSData dataWithContentsOfFile:[self directory]];
+    return [NSKeyedUnarchiver unarchivedObjectOfClass:Student.class fromData:data error:nil];
 }
 
 //MARK:- LessonFour

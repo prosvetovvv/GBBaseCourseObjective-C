@@ -30,6 +30,17 @@
     //[self createAndPrintStudents];
     
     //LessonSeven
+    Student *studentOne = [[Student alloc] initStudentWithFirstName: @"Ivan" lastName: @"Petrov" age: 20];
+    NSLog(@"StudentOne: %@", studentOne);
+    
+    [self writeStudent:studentOne];
+    
+    NSLog(@"Deleting");
+    studentOne = nil;
+    NSLog(@"StudentOne: %@", studentOne);
+    
+    studentOne = [self readStudent];
+    NSLog(@"StudentOne: %@", studentOne);
 }
 
 //MARK:- LessonSeven
@@ -37,8 +48,14 @@
     return [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject] stringByAppendingString:@"/student.txt"];
 }
 
-- (Student*)readStudent:(Student*)student {
-    //NSData *data = [NSKeyedArchiver archivedDataWithRootObject:student requiringSecureCoding:NO error:nil];
+- (void)writeStudent:(Student*)student {
+    NSLog(@"Writing");
+    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:student requiringSecureCoding:YES error:nil];
+    [data writeToFile:[self directory] atomically:YES];
+}
+
+- (Student*)readStudent {
+    NSLog(@"Reading");
     NSData *data = [NSData dataWithContentsOfFile:[self directory]];
     return [NSKeyedUnarchiver unarchivedObjectOfClass:Student.class fromData:data error:nil];
 }

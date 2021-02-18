@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Student : NSObject<NSCoding>
+@interface Student : NSObject<NSCoding, NSSecureCoding>
 
 @property (nonatomic, strong) NSString *firstName;
 @property (nonatomic, strong) NSString *lastName;
